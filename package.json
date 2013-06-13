@@ -1,11 +1,11 @@
 {
-  "name": "angular-underscore",
-  "description": "Underscore adapter for AngularJS.",
-  "version": "0.3.0",
-  "author": "floydsoft <floydsoft@gmail.com>",
-  "main": "angular-underscore.js",
+  "name": "angular-lodash",
+  "description": "Lodash adapter for AngularJS.",
+  "version": "0.1.0",
+  "author": "cabrel <cabrel@zerklabs.com>",
+  "main": "angular-lodash.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/floydsoft/angular-underscore"
+    "url": "https://github.com/cabrel/angular-lodash"
   }
 }

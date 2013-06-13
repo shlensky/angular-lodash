@@ -1,4 +1,4 @@
-describe('angular-underscore: Filter', function() {
+describe('angular-lodash: Filter', function() {
   var simpleAdapList = [
     'map', 'collect',
     'reduce', 'inject', 'foldl',
@@ -39,7 +39,7 @@ describe('angular-underscore: Filter', function() {
   beforeEach(module('_'));
 
   _.each(simpleAdapList, function(fnName) {
-    it(fnName + " should adapt to underscore's "+ fnName,
+    it(fnName + " should adapt to lodash's "+ fnName,
       inject(function($filter) {
         expect($filter(fnName).toString()).toBe(_[fnName].toString());
     }));

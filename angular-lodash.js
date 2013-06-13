@@ -2,9 +2,9 @@
   'use strict';
 
   var
-    underscoreModule = ng.module('angular-underscore', []),
-    utilsModule = ng.module('angular-underscore/utils', []),
-    filtersModule = ng.module('angular-underscore/filters', []);
+    lodashModule = ng.module('angular-lodash', []),
+    utilsModule = ng.module('angular-lodash/utils', []),
+    filtersModule = ng.module('angular-lodash/filters', []);
 
   // begin custom _
 
@@ -33,7 +33,7 @@
   });
 
   // Shiv "filter", "reject" to angular's built-in,
-  // and reserve underscore's feature(works on obj).
+  // and reserve lodash's feature(works on obj).
   ng.injector(['ng']).invoke(function($filter) {
     _.filter = _.select = _.wrap($filter('filter'), function(filter, obj, exp) {
       if(!(_.isArray(obj))) {
@@ -58,24 +58,24 @@
   // end custom _
 
 
-  // begin register angular-underscore/utils
+  // begin register angular-lodash/utils
 
   _.each(_.methods(_), function(methodName) {
     function register($rootScope) {$rootScope[methodName] = _.bind(_[methodName], _);}
 
     _.each([
-      underscoreModule,
+      lodashModule,
       utilsModule,
-      ng.module('angular-underscore/utils/' + methodName, [])
+      ng.module('angular-lodash/utils/' + methodName, [])
       ], function(module) {
         module.run(register);
     });
   });
 
-  // end register angular-underscore/utils
+  // end register angular-lodash/utils
 
 
-  // begin register angular-underscore/filters
+  // begin register angular-lodash/filters
 
   var
     adapList = [
@@ -139,15 +139,15 @@
 
     _.each(filterNames, function(filterName) {
       _.each([
-        underscoreModule,
+        lodashModule,
         filtersModule,
-        ng.module('angular-underscore/filters/' + filterName, [])
+        ng.module('angular-lodash/filters/' + filterName, [])
         ], function(module) {
           module.filter(filterName, filterFactory);
       });
     });
   });
 
-  // end register angular-underscore/filters
+  // end register angular-lodash/filters
 
 }(angular, _));

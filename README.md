@@ -1,59 +1,34 @@
-# An AngularJS module adapting underscore
+# An AngularJS module adapting lodash
 
-This module exposes underscore's API into angular app's root scope,
-and provides some filters from underscore.
+A fork of [angular-underscore](https://github.com/floydsoft/angular-underscore)
 
+This module exposes lodash's API into angular app's root scope,
+and provides some filters from lodash.
 
-## Filters
-
-Whole Underscore's API for Collections, Arrays and Objects except decision API
-(e.g. functions return true|false), side effect guys, and _.range(not making sense as a filter).
-
-
-For API details please check out http://underscorejs.org/
 
 ## How to use
 
 ### Install
 
-After load angular.js and underscore.js:
+After loading angular.js and lodash.js:
 
 ```html
-<script type="text/javascript" src="angular-underscore.js"></script>
+<script type="text/javascript" src="angular-lodash.js"></script>
 ```
 
-### Load angular-underscore
+### Load angular-lodash
 
-#### Load whole stuff
-
-```javascript
-angular.module('yourAwesomeApp', ['angular-underscore']);
-```
-
-#### Load API only
+#### Load the whole library
 
 ```javascript
-angular.module('yourAwesomeApp', ['angular-underscore/utils']);
-```
-
-#### Load filters only
-
-```javascript
-angular.module('yourAwesomeApp', ['angular-underscore/filters']);
-```
-
-#### Load specific feature only
-
-```javascript
-// load `shuffle` only
-angular.module('yourAwesomeApp', ['angular-underscore/filters/shuffle']);
+angular.module('app', ['angular-lodash']);
 ```
 
 ### Usecase
 
 ```html
 <script type="text/javascript">
-  angular.module('example', ['angular-underscore']);
+  angular.module('example', ['angular-lodash']);
 </script>
 
 <body ng-app="example">
