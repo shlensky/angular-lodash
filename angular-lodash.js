@@ -125,7 +125,8 @@
       'uniqueId',
       'escape',
       'result',
-      'template'
+      'template',
+      'parseInt'
     ];
 
   _.each(adapList, function(filterNames) {
