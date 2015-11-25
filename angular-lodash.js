@@ -126,7 +126,8 @@
       'escape',
       'result',
       'template',
-      'parseInt'
+      'parseInt',
+      'trunc'
     ];
 
   _.each(adapList, function(filterNames) {
