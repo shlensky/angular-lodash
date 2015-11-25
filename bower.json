@@ -1,7 +1,7 @@
 {
   "name": "angular-lodash",
   "main": "angular-lodash.js",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "homepage": "https://github.com/cabrel/angular-lodash",
   "ignore": [
     "**/.*",
